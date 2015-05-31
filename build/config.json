@@ -1,0 +1,9 @@
+{
+  "distDir": "dist",
+  "files": [
+    "src/app.js",
+    "src/helpers.js",
+    "src/data.js",
+    "src/modules.js"
+  ]
+}
