@@ -16,6 +16,9 @@
     "tests",
     "build",
     "examples",
-    "src"
+    "src",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
   ]
 }
