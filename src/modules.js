@@ -36,6 +36,11 @@
       _.forEach(moduleNames, function (moduleName) {
         var m = app[moduleName];
 
+        // Module not defined ?
+        if (typeof m === 'undefined') {
+          throw new Error('Module <' + moduleName + '> is not defined. Make sure the name is correct and the module script file is loaded.');
+        }
+
         // If module has its own 'run' method, execute it
         if (typeof m.run == 'function') {
           m.run();

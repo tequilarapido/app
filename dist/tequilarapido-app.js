@@ -1,5 +1,5 @@
 /**
- * tequilarapido-app.js v0.0.1
+ * tequilarapido-app.js v0.0.2
  * (c) 2015 tequilarapido.
  */
 (function (window) {
@@ -177,6 +177,11 @@
     $(document).ready(function () {
       _.forEach(moduleNames, function (moduleName) {
         var m = app[moduleName];
+
+        // Module not defined ?
+        if (typeof m === 'undefined') {
+          throw new Error('Module <' + moduleName + '> is not defined. Make sure the name is correct and the module script file is loaded.');
+        }
 
         // If module has its own 'run' method, execute it
         if (typeof m.run == 'function') {
