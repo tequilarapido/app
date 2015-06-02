@@ -1,5 +1,5 @@
 /**
- * tequilarapido-app.js v0.0.2
+ * tequilarapido-app.js v0.0.3
  * (c) 2015 tequilarapido.
  */
 (function (window) {
