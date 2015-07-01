@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/tequilarapido/app.git"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
