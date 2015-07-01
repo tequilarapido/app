@@ -1,5 +1,5 @@
 /**
- * tequilarapido-app.js v0.0.3
+ * tequilarapido-app.js v0.0.5
  * (c) 2015 tequilarapido.
  */
 (function (window) {
@@ -170,7 +170,10 @@
       return;
     }
 
-    // Call init if defined on the module
+    // Call defineUI() if defined on the module
+    typeof module.defineUI === 'function' && module.defineUI();
+
+    // Call init() if defined on the module
     typeof module.container === 'function' && module.init();
 
     // Init any vues (VueJS) attached to this module

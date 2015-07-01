@@ -28,7 +28,10 @@
       return;
     }
 
-    // Call init if defined on the module
+    // Call defineUI() if defined on the module
+    typeof module.defineUI === 'function' && module.defineUI();
+
+    // Call init() if defined on the module
     typeof module.container === 'function' && module.init();
 
     // Init any vues (VueJS) attached to this module

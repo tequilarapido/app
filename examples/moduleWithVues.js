@@ -1,31 +1,19 @@
-/**
- * Module
- */
-(function (app, $) {
-  'use strict';
-
-  var module = {}, $ui = {};
-
-  module.isRunnable = function () {
-    $ui.container = $('#module-container');
-    return $ui.container.length;
-  }
-
-  // Register module
-  app.registerModule('moduleWithVues', module);
-
-})(App, jQuery);
+// Declare module as usual (example/module.js)
 
 
 /**
- * VueJs vue
+ * vueName
  */
-(function (app) {
-  app.addModuleVue('moduleWithVues', 'aVue', function (module) {
+(function (app, $, window, document) {
+
+  app.addModuleVue('moduleName', 'vueName', function (module) {
     return new Vue({
       el: '#vue-el',
       data: {},
       methods: {}
     });
-  });
-})(App);
+  }
+
+);
+
+})(App, jQuery, window, document);
