@@ -14,7 +14,7 @@
     // if not we'll use the `isRunnable` method.
 
     // The module must define one of the two methods
-    if(typeof module.container !== 'function' && typeof module.isRunnable === 'function'){
+    if(typeof module.container !== 'function' && typeof module.isRunnable !== 'function'){
       throw new Error('Module <' + moduleName + '> must define isRunnable() method.');
     }
 
