@@ -6,7 +6,7 @@
 
   var module = {}, $ui = {};
 
-  module.container = function () {
+  module.isRunnable = function () {
     $ui.container = $('#module-container');
     return $ui.container.length;
   }
