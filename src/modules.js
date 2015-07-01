@@ -8,6 +8,9 @@
    * @param {string} moduleName
    */
   var runModule = function (module, moduleName) {
+
+    // Call defineUI() if defined on the module
+    typeof module.defineUI === 'function' && module.defineUI();
     
     // Check if we need to run module 
     // To keep backward compatibility we check if we have a `container()` method, 
@@ -27,9 +30,6 @@
     if (typeof module.isRunnable === 'function' && !module.isRunnable()) {
       return;
     }
-
-    // Call defineUI() if defined on the module
-    typeof module.defineUI === 'function' && module.defineUI();
 
     // Call init() if defined on the module
     typeof module.container === 'function' && module.init();
