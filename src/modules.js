@@ -32,7 +32,7 @@
     }
 
     // Call init() if defined on the module
-    typeof module.container === 'function' && module.init();
+    typeof module.init === 'function' && module.init();
 
     // Init any vues (VueJS) attached to this module
     if (module.vues) {

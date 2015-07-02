@@ -1,5 +1,5 @@
 /**
- * tequilarapido-app.js v0.0.7
+ * tequilarapido-app.js v0.0.8
  * (c) 2015 tequilarapido.
  */
 (function (window) {
@@ -174,7 +174,7 @@
     }
 
     // Call init() if defined on the module
-    typeof module.container === 'function' && module.init();
+    typeof module.init === 'function' && module.init();
 
     // Init any vues (VueJS) attached to this module
     if (module.vues) {
