@@ -1,5 +1,5 @@
 /**
- * tequilarapido-app.js v0.0.8
+ * tequilarapido-app.js v0.0.10
  * (c) 2015 tequilarapido.
  */
 (function (window) {
@@ -151,9 +151,6 @@
    */
   var runModule = function (module, moduleName) {
 
-    // Call defineUI() if defined on the module
-    typeof module.defineUI === 'function' && module.defineUI();
-    
     // Check if we need to run module 
     // To keep backward compatibility we check if we have a `container()` method, 
     // if not we'll use the `isRunnable` method.
@@ -172,6 +169,9 @@
     if (typeof module.isRunnable === 'function' && !module.isRunnable()) {
       return;
     }
+
+    // Call defineUI() if defined on the module
+    typeof module.defineUI === 'function' && module.defineUI();
 
     // Call init() if defined on the module
     typeof module.init === 'function' && module.init();
