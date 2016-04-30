@@ -16,7 +16,7 @@
 
     // Set
     app.dataStore[name] = object;
-  };
+  }
 
 
   /**

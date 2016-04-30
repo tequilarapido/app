@@ -1,6 +1,6 @@
 /**
- * tequilarapido-app.js v0.0.10
- * (c) 2015 tequilarapido.
+ * tequilarapido-app.js v0.0.11
+ * (c) 2016 tequilarapido.
  */
 (function (window) {
   'use strict';
@@ -11,6 +11,9 @@
    * @type {object}
    */
   var app = {};
+
+  // Vues declarations
+  app.vues = {};
 
   /**
    * Init and inject into global (window) scope
@@ -29,7 +32,7 @@
    */
   function ready(callable) {
     $(document).ready(callable);
-  };
+  }
 
   /**
    * Resize
@@ -38,7 +41,7 @@
    */
   function resize(callable) {
     $(window).resize(_.debounce(callable, 500));
-  };
+  }
 
   /**
    * Return viewport
@@ -71,7 +74,7 @@
       "X-CSRF-Token",
       csrfToken()
     );
-  };
+  }
 
   /**
    * Return common ajax request headers
@@ -83,7 +86,7 @@
       'Accept': 'application/json',
       'X-CSRF-Token': csrfToken()
     };
-  };
+  }
 
   /**
    * Global ajax setup
@@ -129,7 +132,7 @@
 
     // Set
     app.dataStore[name] = object;
-  };
+  }
 
 
   /**
@@ -139,6 +142,8 @@
   app.data = data;
 
 })(App);
+
+/*jshint -W030 */
 
 (function (app, $, _) {
   'use strict';
@@ -151,8 +156,8 @@
    */
   var runModule = function (module, moduleName) {
 
-    // Check if we need to run module 
-    // To keep backward compatibility we check if we have a `container()` method, 
+    // Check if we need to run module
+    // To keep backward compatibility we check if we have a `container()` method,
     // if not we'll use the `isRunnable` method.
 
     // The module must define one of the two methods
@@ -182,7 +187,7 @@
         vue(module);
       });
     }
-   
+
   };
 
 
@@ -212,7 +217,7 @@
         runModule(m, moduleName);
       });
     });
-  };
+  }
 
   /**
    * Add / attach a vue to module
@@ -223,7 +228,7 @@
    */
   function addModuleVue(module, vueName, vue) {
     app[module].vues[vueName] = vue;
-  };
+  }
 
 
   /**
@@ -244,7 +249,7 @@
 
     // Add helpers
     module.services.requestHeaders = app.getCommonRequestHeaders;
-  };
+  }
 
 
   /**

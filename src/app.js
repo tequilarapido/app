@@ -8,6 +8,9 @@
    */
   var app = {};
 
+  // Vues declarations
+  app.vues = {};
+
   /**
    * Init and inject into global (window) scope
    */

@@ -8,7 +8,7 @@
    */
   function ready(callable) {
     $(document).ready(callable);
-  };
+  }
 
   /**
    * Resize
@@ -17,7 +17,7 @@
    */
   function resize(callable) {
     $(window).resize(_.debounce(callable, 500));
-  };
+  }
 
   /**
    * Return viewport
@@ -50,7 +50,7 @@
       "X-CSRF-Token",
       csrfToken()
     );
-  };
+  }
 
   /**
    * Return common ajax request headers
@@ -62,7 +62,7 @@
       'Accept': 'application/json',
       'X-CSRF-Token': csrfToken()
     };
-  };
+  }
 
   /**
    * Global ajax setup

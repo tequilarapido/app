@@ -1,3 +1,5 @@
+/*jshint -W030 */
+
 (function (app, $, _) {
   'use strict';
 
@@ -9,8 +11,8 @@
    */
   var runModule = function (module, moduleName) {
 
-    // Check if we need to run module 
-    // To keep backward compatibility we check if we have a `container()` method, 
+    // Check if we need to run module
+    // To keep backward compatibility we check if we have a `container()` method,
     // if not we'll use the `isRunnable` method.
 
     // The module must define one of the two methods
@@ -40,7 +42,7 @@
         vue(module);
       });
     }
-   
+
   };
 
 
@@ -70,7 +72,7 @@
         runModule(m, moduleName);
       });
     });
-  };
+  }
 
   /**
    * Add / attach a vue to module
@@ -81,7 +83,7 @@
    */
   function addModuleVue(module, vueName, vue) {
     app[module].vues[vueName] = vue;
-  };
+  }
 
 
   /**
@@ -102,7 +104,7 @@
 
     // Add helpers
     module.services.requestHeaders = app.getCommonRequestHeaders;
-  };
+  }
 
 
   /**
