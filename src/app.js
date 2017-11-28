@@ -6,7 +6,7 @@
    *
    * @type {object}
    */
-  var app = {};
+  var app = window.App || {};
 
   // Vues declarations
   app.vues = {};

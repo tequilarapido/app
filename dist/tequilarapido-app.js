@@ -1,6 +1,6 @@
 /**
- * tequilarapido-app.js v0.0.11
- * (c) 2016 tequilarapido.
+ * tequilarapido-app.js v0.0.12
+ * (c) 2017 tequilarapido.
  */
 (function (window) {
   'use strict';
@@ -10,7 +10,7 @@
    *
    * @type {object}
    */
-  var app = {};
+  var app = window.App || {};
 
   // Vues declarations
   app.vues = {};
